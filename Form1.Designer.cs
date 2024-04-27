@@ -35,7 +35,6 @@
             this.btnConnect = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBoxDTR = new System.Windows.Forms.CheckBox();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cBoxBaud = new System.Windows.Forms.ComboBox();
@@ -47,16 +46,18 @@
             this.cBoxParity = new System.Windows.Forms.ComboBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBoxTx = new System.Windows.Forms.RichTextBox();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.saveDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnWebView = new System.Windows.Forms.Button();
             this.btnTx = new System.Windows.Forms.Button();
             this.btnClearRx = new System.Windows.Forms.Button();
-            this.btnSet = new System.Windows.Forms.Button();
-            this.saveDialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.checkBoxRxH = new System.Windows.Forms.CheckBox();
-            this.checkBoxTxH = new System.Windows.Forms.CheckBox();
             this.checkBox1NewLine = new System.Windows.Forms.CheckBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.checkBoxTxH = new System.Windows.Forms.CheckBox();
+            this.btnSet = new System.Windows.Forms.Button();
+            this.checkBoxRxH = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -128,17 +129,6 @@
             this.checkBoxDTR.Text = "DTR";
             this.checkBoxDTR.UseVisualStyleBackColor = true;
             this.checkBoxDTR.CheckedChanged += new System.EventHandler(this.checkBoxDTR_CheckedChanged);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackgroundImage = global::SerialMonitor.Properties.Resources.刷新;
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRefresh.Location = new System.Drawing.Point(59, 0);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(30, 30);
-            this.btnRefresh.TabIndex = 12;
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // label5
             // 
@@ -266,94 +256,13 @@
             this.richTextBoxTx.TabIndex = 5;
             this.richTextBoxTx.Text = "Type to send something.";
             // 
-            // btnSave
-            // 
-            this.btnSave.BackgroundImage = global::SerialMonitor.Properties.Resources.保存;
-            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSave.Location = new System.Drawing.Point(133, 39);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(30, 30);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnTx
-            // 
-            this.btnTx.AutoEllipsis = true;
-            this.btnTx.BackgroundImage = global::SerialMonitor.Properties.Resources.数据导出_01;
-            this.btnTx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.btnTx.Location = new System.Drawing.Point(10, 90);
-            this.btnTx.Name = "btnTx";
-            this.btnTx.Size = new System.Drawing.Size(60, 60);
-            this.btnTx.TabIndex = 6;
-            this.btnTx.UseVisualStyleBackColor = true;
-            this.btnTx.Click += new System.EventHandler(this.btnTx_Click);
-            // 
-            // btnClearRx
-            // 
-            this.btnClearRx.BackgroundImage = global::SerialMonitor.Properties.Resources.删除;
-            this.btnClearRx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClearRx.Location = new System.Drawing.Point(133, 3);
-            this.btnClearRx.Name = "btnClearRx";
-            this.btnClearRx.Size = new System.Drawing.Size(30, 30);
-            this.btnClearRx.TabIndex = 4;
-            this.btnClearRx.UseVisualStyleBackColor = true;
-            this.btnClearRx.Click += new System.EventHandler(this.btnClearRx_Click_1);
-            // 
-            // btnSet
-            // 
-            this.btnSet.BackgroundImage = global::SerialMonitor.Properties.Resources.菜单;
-            this.btnSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSet.Location = new System.Drawing.Point(133, 75);
-            this.btnSet.Name = "btnSet";
-            this.btnSet.Size = new System.Drawing.Size(30, 30);
-            this.btnSet.TabIndex = 8;
-            this.btnSet.UseVisualStyleBackColor = true;
-            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
-            // 
-            // checkBoxRxH
-            // 
-            this.checkBoxRxH.AutoSize = true;
-            this.checkBoxRxH.BackColor = System.Drawing.Color.Transparent;
-            this.checkBoxRxH.Location = new System.Drawing.Point(10, 9);
-            this.checkBoxRxH.Name = "checkBoxRxH";
-            this.checkBoxRxH.Size = new System.Drawing.Size(69, 21);
-            this.checkBoxRxH.TabIndex = 9;
-            this.checkBoxRxH.Text = "HEX Rx";
-            this.checkBoxRxH.UseVisualStyleBackColor = false;
-            this.checkBoxRxH.CheckedChanged += new System.EventHandler(this.checkBoxRxH_CheckedChanged);
-            // 
-            // checkBoxTxH
-            // 
-            this.checkBoxTxH.AutoSize = true;
-            this.checkBoxTxH.BackColor = System.Drawing.Color.Transparent;
-            this.checkBoxTxH.Location = new System.Drawing.Point(10, 36);
-            this.checkBoxTxH.Name = "checkBoxTxH";
-            this.checkBoxTxH.Size = new System.Drawing.Size(68, 21);
-            this.checkBoxTxH.TabIndex = 10;
-            this.checkBoxTxH.Text = "HEX Tx";
-            this.checkBoxTxH.UseVisualStyleBackColor = false;
-            // 
-            // checkBox1NewLine
-            // 
-            this.checkBox1NewLine.AutoSize = true;
-            this.checkBox1NewLine.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1NewLine.Location = new System.Drawing.Point(10, 63);
-            this.checkBox1NewLine.Name = "checkBox1NewLine";
-            this.checkBox1NewLine.Size = new System.Drawing.Size(79, 21);
-            this.checkBox1NewLine.TabIndex = 11;
-            this.checkBox1NewLine.Text = "With \\r\\n";
-            this.checkBox1NewLine.UseVisualStyleBackColor = false;
-            this.checkBox1NewLine.CheckedChanged += new System.EventHandler(this.checkBox1NewLine_CheckedChanged);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.7095F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.2905F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.richTextBoxTx, 0, 2);
@@ -379,10 +288,22 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(889, 466);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackgroundImage = global::SerialMonitor.Properties.Resources.刷新;
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefresh.Location = new System.Drawing.Point(59, 0);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(30, 30);
+            this.btnRefresh.TabIndex = 12;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // panel2
             // 
             this.panel2.BackgroundImage = global::SerialMonitor.Properties.Resources._372627688_03d2a398125e7103803dedf53f5079bf;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Controls.Add(this.btnWebView);
             this.panel2.Controls.Add(this.btnTx);
             this.panel2.Controls.Add(this.btnClearRx);
             this.panel2.Controls.Add(this.checkBox1NewLine);
@@ -395,6 +316,97 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(167, 159);
             this.panel2.TabIndex = 13;
+            // 
+            // btnWebView
+            // 
+            this.btnWebView.Location = new System.Drawing.Point(88, 127);
+            this.btnWebView.Name = "btnWebView";
+            this.btnWebView.Size = new System.Drawing.Size(75, 23);
+            this.btnWebView.TabIndex = 13;
+            this.btnWebView.Text = "View";
+            this.btnWebView.UseVisualStyleBackColor = true;
+            this.btnWebView.Click += new System.EventHandler(this.btnWebView_Click);
+            // 
+            // btnTx
+            // 
+            this.btnTx.AutoEllipsis = true;
+            this.btnTx.BackgroundImage = global::SerialMonitor.Properties.Resources.数据导出_01;
+            this.btnTx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTx.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.btnTx.Location = new System.Drawing.Point(10, 90);
+            this.btnTx.Name = "btnTx";
+            this.btnTx.Size = new System.Drawing.Size(60, 60);
+            this.btnTx.TabIndex = 6;
+            this.btnTx.UseVisualStyleBackColor = true;
+            this.btnTx.Click += new System.EventHandler(this.btnTx_Click);
+            // 
+            // btnClearRx
+            // 
+            this.btnClearRx.BackgroundImage = global::SerialMonitor.Properties.Resources.删除;
+            this.btnClearRx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClearRx.Location = new System.Drawing.Point(133, 3);
+            this.btnClearRx.Name = "btnClearRx";
+            this.btnClearRx.Size = new System.Drawing.Size(30, 30);
+            this.btnClearRx.TabIndex = 4;
+            this.btnClearRx.UseVisualStyleBackColor = true;
+            this.btnClearRx.Click += new System.EventHandler(this.btnClearRx_Click_1);
+            // 
+            // checkBox1NewLine
+            // 
+            this.checkBox1NewLine.AutoSize = true;
+            this.checkBox1NewLine.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1NewLine.Location = new System.Drawing.Point(10, 63);
+            this.checkBox1NewLine.Name = "checkBox1NewLine";
+            this.checkBox1NewLine.Size = new System.Drawing.Size(79, 21);
+            this.checkBox1NewLine.TabIndex = 11;
+            this.checkBox1NewLine.Text = "With \\r\\n";
+            this.checkBox1NewLine.UseVisualStyleBackColor = false;
+            this.checkBox1NewLine.CheckedChanged += new System.EventHandler(this.checkBox1NewLine_CheckedChanged);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackgroundImage = global::SerialMonitor.Properties.Resources.保存;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSave.Location = new System.Drawing.Point(133, 39);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(30, 30);
+            this.btnSave.TabIndex = 7;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // checkBoxTxH
+            // 
+            this.checkBoxTxH.AutoSize = true;
+            this.checkBoxTxH.BackColor = System.Drawing.Color.Transparent;
+            this.checkBoxTxH.Location = new System.Drawing.Point(10, 36);
+            this.checkBoxTxH.Name = "checkBoxTxH";
+            this.checkBoxTxH.Size = new System.Drawing.Size(68, 21);
+            this.checkBoxTxH.TabIndex = 10;
+            this.checkBoxTxH.Text = "HEX Tx";
+            this.checkBoxTxH.UseVisualStyleBackColor = false;
+            // 
+            // btnSet
+            // 
+            this.btnSet.BackgroundImage = global::SerialMonitor.Properties.Resources.菜单;
+            this.btnSet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSet.Location = new System.Drawing.Point(133, 75);
+            this.btnSet.Name = "btnSet";
+            this.btnSet.Size = new System.Drawing.Size(30, 30);
+            this.btnSet.TabIndex = 8;
+            this.btnSet.UseVisualStyleBackColor = true;
+            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
+            // 
+            // checkBoxRxH
+            // 
+            this.checkBoxRxH.AutoSize = true;
+            this.checkBoxRxH.BackColor = System.Drawing.Color.Transparent;
+            this.checkBoxRxH.Location = new System.Drawing.Point(10, 9);
+            this.checkBoxRxH.Name = "checkBoxRxH";
+            this.checkBoxRxH.Size = new System.Drawing.Size(69, 21);
+            this.checkBoxRxH.TabIndex = 9;
+            this.checkBoxRxH.Text = "HEX Rx";
+            this.checkBoxRxH.UseVisualStyleBackColor = false;
+            this.checkBoxRxH.CheckedChanged += new System.EventHandler(this.checkBoxRxH_CheckedChanged);
             // 
             // Form1
             // 
@@ -450,6 +462,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox checkBoxDTR;
+        private System.Windows.Forms.Button btnWebView;
     }
 }
 

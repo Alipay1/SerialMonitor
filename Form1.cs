@@ -149,7 +149,7 @@ namespace SerialMonitor
                     setAllSerialComboBox(true);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 serialPort1.Close();
                 //serialPort1 = new System.IO.Ports.SerialPort();
@@ -159,7 +159,7 @@ namespace SerialMonitor
 
 
 
-                Console.WriteLine(ex.ToString() );
+                Console.WriteLine(ex.ToString());
 
                 setAllSerialComboBox(true);
 
@@ -311,6 +311,25 @@ namespace SerialMonitor
         private void checkBoxDTR_CheckedChanged(object sender, EventArgs e)
         {
             serialPort1.DtrEnable = checkBoxDTR.Checked;
+        }
+        public Form2 subform;//实例化子窗体
+        private void OpenSubForm()
+        {
+            //base.Close();//关闭主窗体,可选功能
+            if (subform != null)
+            {
+                //避免多次打开同一个子窗体
+                subform.Close();//关闭窗体
+                subform.Dispose();//注销窗体线程
+            }
+            subform = new Form2();
+            subform.StartPosition = FormStartPosition.CenterScreen;//居中显示
+            subform.ShowInTaskbar = false;//不在任务栏显示子窗体
+            subform.Show();
+        }
+        private void btnWebView_Click(object sender, EventArgs e)
+        {
+            OpenSubForm();
         }
     }
 
